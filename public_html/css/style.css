@@ -1,0 +1,436 @@
+/***********************************************************************************************************
+ * STRUCTURE
+ ***********************************************************************************************************/
+
+body { 
+    background-color: #31302b; 
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#wrapper {
+    width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#small_logo { display: none; }
+
+#menu_btn { 
+    display: none; 
+    background-color: #1a1a1a;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 4px 10px;
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu_btn .bar {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    width: 20px;
+    margin: 4px 0;
+}
+
+#main {
+    position: relative;
+    clear: both;
+    overflow: auto; 
+    margin-top: 10px;
+}
+
+#sidebar_left {
+    width: 230px;
+    float: left;
+}
+
+#mainMenu {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 10px;
+    background-color: #d80100;
+    color: #fff;
+}
+
+#options {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#contact {
+    width: 100%;
+    height: 230px;
+    background-color: #d80100;
+    color: #fff;
+}
+
+#sidebar_left_top { display: none; }
+
+#content {
+    width: 720px;
+    margin-left: 10px;
+    float: left;
+}
+
+.lrgBox {
+    width: 470px;
+    height: 230px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+
+.smllBox {
+    width: 230px;
+    height: 230px;
+    background-color: #ffeecc;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+
+.popup {
+    height: 78px;
+    width: 100%;
+    color: #fff;
+    transition: 0.8s;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.popup:hover {
+    height: 230px;
+}
+
+.popup_content { padding: 10px; }
+
+.popup_icon {
+    background: transparent url('../images/icons/popup_icon.png') no-repeat left center;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+
+.popup_header { 
+    display: inline-block; 
+    position: relative;
+    top: -7px;
+    margin-left: 8px;
+}
+
+.popup_link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#sidebar_right {
+    width: 230px;
+    float: right;
+}
+
+#latestNews,
+#telephone,
+#social {
+    width: 100%;
+    height: 230px;
+    background-color: #1c1c19;
+    color: #fff;
+}
+
+#latestNews,
+#telephone { margin-bottom: 10px; }
+
+#sidebar_right_bottom { display: none; }
+
+#footer { margin-bottom: 20px; }
+
+#footerBoxes {
+    height: 110px;
+    width: 720px;
+    margin-bottom: 10px;
+    margin-left: 240px;    
+}
+
+#footerBoxes .footerBox {
+    width: 230px;
+    height: 100%;
+    background-color: #fff;
+    float: left;
+    margin-right: 10px;
+}
+
+#footerMenu {
+    width: 950px;
+    height: 36px;
+    background-color: #252422;
+}
+
+#mobile_menu { 
+    display: none; 
+    background-color: #292925;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#mobile_menu .menu_item {
+    padding: 15px 30px;
+    border-bottom: 1px solid #4d4b44;
+}
+
+#mobile_menu .menu_item:hover { 
+    background-color: #1c1c19; 
+    cursor: pointer;
+}
+
+#mobile_menu .menu_item.selected { background-color: #1c1c19; }
+
+#mobile_menu .icon {
+    background-image: url('../images/icons/footer_menu.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+#mobile_menu #home {
+    background-position: 0 0;
+    height: 36px;
+    width: 22px;
+    margin-right: 27px;
+    margin-left: 8px;
+}
+
+#mobile_menu #whoweare {
+    background-position: -267px -8px;
+    height: 20px;
+    width: 37px;
+    margin-right: 21px;
+}
+
+#mobile_menu #ourbusinessstructure {
+    background-position: -64px 0;
+    height: 35px;
+    width: 33px;
+    margin-right: 22px;
+    margin-left: 2px;
+}
+
+#mobile_menu #ourservices {
+    background-position: -101px 0;
+    height: 36px;
+    width: 31px;
+    margin-right: 22px;
+    margin-left: 4px;
+}
+
+#mobile_menu #ourcredibility {
+    background-position: -223px -2px;
+    height: 32px;
+    width: 37px;
+    margin-right: 20px;
+}
+
+#mobile_menu #newsevents {
+    background-position: -311px -2px;
+    height: 32px;
+    width: 31px;
+    margin-right: 22px;
+    margin-left: 4px;
+}
+
+#mobile_menu #recruitment {
+    background-position: -25px -1px;
+    height: 33px;
+    width: 32px;
+    margin-right: 22px;
+    margin-left: 3px;
+}
+
+#mobile_menu #contactus {
+    background-position: -387px 0;
+    height: 35px;
+    width: 30px;
+    margin-right: 23px;
+    margin-left: 4px;
+}
+
+#mobile_menu .menu_txt { display: inline-block; }
+
+#mobile_menu .menu_txt.home { 
+    position: relative;
+    top: -10px; 
+}
+
+#mobile_menu .menu_txt.whoweare { 
+    position: relative;
+    top: -2px; 
+}
+
+#mobile_menu .menu_txt.ourbusinessstructure { 
+    position: relative;
+    top: -10px; 
+}
+
+#mobile_menu .menu_txt.ourservices { 
+    position: relative;
+    top: -10px; 
+}
+
+#mobile_menu .menu_txt.ourcredibility { 
+    position: relative;
+    top: -10px; 
+}
+
+#mobile_menu .menu_txt.newsevents { 
+    position: relative;
+    top: -12px; 
+}
+
+#mobile_menu .menu_txt.recruitment { 
+    position: relative;
+    top: -10px; 
+}
+
+#mobile_menu .menu_txt.contactus { 
+    position: relative;
+    top: -10px; 
+}
+
+
+/***********************************************************************************************************
+ * GENERIC
+ ***********************************************************************************************************/
+.innercolleft85 { 
+	clear: left; 
+	float: left; 
+	width: 84.8%; 
+}
+.innercolright15 { 
+	clear: right; 
+	float: right; 
+	width: 14.5%; 
+}
+
+.fl { float: left; }
+.fr { float: right; } 
+
+.clear { 
+	clear: both; 
+	display: block; 
+	overflow: hidden; 
+	height: 0; 
+}
+
+.redBG { background-color: #d80100; }
+
+.opacity {
+    zoom: 1;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+
+
+
+/***********************************************************************************************************
+ * MOBILE
+ ***********************************************************************************************************/
+@media (max-width: 1460px) {
+    
+}
+
+
+@media (max-width: 1220px) {
+    #wrapper { width: 960px; }   
+    
+    #sidebar_right { display: none; }
+    
+    #sidebar_right_bottom .footerBox { display: none; }
+    
+    #sidebar_right_bottom { display: block; }
+    
+    #sidebar_right_bottom #latestNews,
+    #sidebar_right_bottom #telephone,
+    #sidebar_right_bottom #social {
+        width: 230px;
+        margin-right: 10px;
+        float: left;
+    }
+}
+
+
+@media (max-width: 990px) {    
+    #wrapper { width: 730px; }
+    
+    #header { margin: 0 10px; }
+    
+    #sidebar_left { display: none; }
+    
+    #sidebar_left_top { display: block; }
+    
+    #sidebar_left_top #mainMenu,
+    #sidebar_left_top #options,
+    #sidebar_left_top #contact {
+        width: 230px;
+        margin-right: 10px;
+        float: left;
+    }
+    
+    #footerBoxes { margin-left: 10px; }
+    
+    #footerMenu {
+        width: 710px;
+        margin-left: 10px;
+    }
+}
+
+
+@media (max-width: 740px) {
+    #wrapper { width: 490px; }  
+    
+    #menu_btn { display: block; }
+    
+    #content { width: 480px; }
+    
+    #sidebar_left_top { display: none; }
+    
+    #sidebar_right_bottom .footerBox { 
+        display: block; 
+        width: 230px;
+        height: 110px;
+        background-color: #fff;
+        float: left;
+        margin-bottom: 9px;
+    }
+    
+    #footer { display: none; }
+    
+    #mobile_menu { display: block; }
+}
+
+
+@media (max-width: 478px) {
+    #wrapper { width: 250px;}
+    
+    #full_logo { display: none; }
+    
+    #small_logo { display: block; }
+    
+    #content { width: 240px; }
+    
+    .lrgBox { width: 230px; }
+    
+    #sidebar_right_bottom #social { margin-bottom: 10px; }
+}
